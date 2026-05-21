@@ -10,7 +10,7 @@ class MdAdapter(BaseAdapter):
         file_id = md5_hash(file_path)
         return DocumentEntity(
             file_id=file_id,
-            title=file_path.split("/")[-1],
+            title=os.path.basename(file_path),
             raw_content=clean_content,
             file_type="md",
             file_path=file_path
