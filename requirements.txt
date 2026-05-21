@@ -1,0 +1,103 @@
+# ==================== 企业知识库｜LangChain 1.x 企业稳定版 ====================
+# 适配：Python 3.12
+# 平台：Windows / Linux
+# 架构：Qdrant + PostgreSQL + LangGraph + LangFuse
+# 更新时间：2026-05
+
+# ==================== 基础依赖 ====================
+
+anyio==4.7.0
+requests==2.32.5
+tiktoken==0.7.0
+
+# ==================== FastAPI ====================
+
+fastapi==0.109.2
+uvicorn==0.24.0
+
+# ==================== 文档处理 ====================
+
+pymupdf==1.23.6
+python-docx==0.8.11
+pandas==2.1.4
+openpyxl==3.1.2
+
+# ==================== 中文检索 ====================
+
+jieba==0.42.1
+rank-bm25==0.2.2
+
+# ==================== 向量数据库 ====================
+
+# Qdrant（企业推荐）
+qdrant-client==1.11.1
+
+# PostgreSQL
+psycopg2-binary==2.9.9
+sqlalchemy==2.0.36
+asyncpg==0.30.0
+pgvector==0.3.6
+
+# ==================== LangChain 1.x ====================
+
+langchain==1.2.11
+langchain-core==1.2.11
+langchain-community==0.4.1
+langgraph==1.1.4
+
+# LangChain 1.x 拆分生态
+langchain-text-splitters==1.0.0
+langchain-openai==1.0.1
+langchain-huggingface==1.0.0
+
+# ==================== AI / Embedding ====================
+
+torch==2.3.1
+transformers==4.44.2
+sentence-transformers==3.0.1
+accelerate==0.34.2
+
+# ==================== Observability ====================
+
+langfuse==3.14.6
+opentelemetry-api==1.33.1
+opentelemetry-sdk==1.33.1
+
+# ==================== 数据模型 ====================
+
+pydantic==2.10.6
+
+# ==================== Whisper 音视频转文字 ====================
+
+openai-whisper==20250625
+ffmpeg-python==0.2.0
+pydub==0.25.1
+
+# ==================== 工具类 ====================
+
+numpy==1.26.4
+scipy==1.13.1
+protobuf==5.27.3
+
+# ==================== OCR（可选） ====================
+
+# paddleocr
+# paddlepaddle
+
+# ==================== 安装建议 ====================
+
+# 先升级基础工具
+# pip install --upgrade pip setuptools wheel
+
+# 安装依赖
+# pip install -r requirements.txt
+
+# ==================== Windows 注意事项 ====================
+
+# 1. Python 推荐 3.12.x
+# 2. Whisper 需要系统安装 ffmpeg
+# 3. Torch 建议 CUDA 12.x
+# 4. PostgreSQL 推荐 15+
+# 5. Qdrant 推荐 Docker 部署
+# 6. 企业生产推荐：
+#    Qdrant + PostgreSQL + LangGraph + LangFuse
